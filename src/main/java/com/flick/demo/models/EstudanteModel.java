@@ -1,19 +1,21 @@
 package com.flick.demo.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_aluno")
 
 public class EstudanteModel {
 
     @Id
     @GeneratedValue
-
     private Long id;
+
+    @Column(name = "nm_-studante")
     private String nome;
     private String email;
+
+    @Column(name = "email-aluno")
     private Integer idade;
 
     public EstudanteModel() {
