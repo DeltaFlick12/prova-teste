@@ -1,22 +1,24 @@
-package com.flick.demo.models;
+package com.flick.school.models;
+
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tb_aluno")
-
 public class EstudanteModel {
 
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
     private Long id;
 
-    @Column(name = "nm_-studante")
+    @Column(name = "Nome_Aluno")
     private String nome;
+    @Column(name = "Email_Alunos")
     private String email;
-
-    @Column(name = "email-aluno")
-    private Integer idade;
+    private int idade;
 
     public EstudanteModel() {
     }
@@ -37,6 +39,14 @@ public class EstudanteModel {
         this.nome = nome;
     }
 
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -45,11 +55,5 @@ public class EstudanteModel {
         this.email = email;
     }
 
-    public Integer getIdade() {
-        return idade;
-    }
 
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
 }

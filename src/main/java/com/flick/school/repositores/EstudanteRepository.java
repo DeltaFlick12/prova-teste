@@ -1,7 +1,9 @@
-package com.flick.demo.repositories;
+package com.flick.school.repositores;
 
-import com.flick.demo.models.EstudanteModel;
+import com.flick.school.models.EstudanteModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EstudanteRepository extends JpaRepository<EstudanteModel, Long> {
+
+
 }
